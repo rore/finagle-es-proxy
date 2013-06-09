@@ -1,4 +1,4 @@
 finagle-es-proxy
 ================
 
-A demo proxy to Elasticsearch using finagle
+This is an example of using [finagle] (https://github.com/twitter/finagle) as a proxy to [Elasticsearch] (http://elasticsearch.org).
