@@ -1,4 +1,4 @@
-package io.github.rore
+package im.rore
 
 import scala.collection.JavaConversions.asScalaBuffer
 import scala.collection.JavaConversions.asScalaSet
@@ -92,7 +92,8 @@ class NativeESClient(cluster: String, hosts: String) extends ESClient(cluster, h
 		// create a mock REST channel to capture the response from ES and return it
 		val mockChannel = new MockRestChannel();
 		// dispatch the request to the REST controller, using our own channel to receive the response
-		controller.dispatchRequest(new NettyHttpRequest(esReq), new NettyHttpChannel(_transport, mockChannel, esReq))
+		val channel = new NettyHttpChannel(_transport, mockChannel, esReq)
+		controller.dispatchRequest(new NettyHttpRequest(esReq, mockChannel), channel)
 		mockChannel.future.asInstanceOf[Future[Response]];
 	}
 

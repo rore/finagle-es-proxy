@@ -1,8 +1,7 @@
-package io.github.rore
+package im.rore
 
 import org.elasticsearch.common.netty.channel.ChannelFuture
 import org.elasticsearch.common.netty.handler.codec.http.HttpResponse
-
 import com.twitter.finagle.http.Response
 import com.twitter.util.Promise
 

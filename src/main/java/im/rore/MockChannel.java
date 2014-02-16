@@ -1,4 +1,4 @@
-package io.github.rore;
+package im.rore;
 
 import java.net.SocketAddress;
 
