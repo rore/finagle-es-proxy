@@ -1,10 +1,10 @@
 finagle-es-proxy
 ================
 
+See the blog post about this code [here](http://rore.im/posts/secure-elasticsearch-finagle/).
+
 This is an example of using [finagle] (https://github.com/twitter/finagle) as a proxy to [Elasticsearch] (http://elasticsearch.org).
 It demonstrates proxying using the Elasticsearch native client, and creating an authentication layer in front of Elasticsearch.   
-
-See the blog post about this code [here](http://rore.im/posts/secure-elasticsearch-finagle/).
 
 The ESProxy object is a server (created using the cool [Twitter Server] (https://github.com/twitter/twitter-server) template) that proxies all requests to an Elasticsearch cluster.
 The cluster settings (hosts and cluster name) can be controlled via initialization parameters (see the [ESProxy] (https://github.com/rore/finagle-es-proxy/blob/master/src/main/scala/im/rore/ESProxy.scala) code).
